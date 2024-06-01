@@ -1,0 +1,6 @@
+[Path]
+Unit=rclone-to-kobo-watcher.service
+PathChanged=/home/gigi/Sync/Kobo
+
+[Install]
+WantedBy=multi-user.target
