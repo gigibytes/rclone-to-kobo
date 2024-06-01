@@ -6,8 +6,6 @@ After=network.target
 Type=simple
 WorkingDirectory=/home/gigi/Sync/Kobo
 ExecStart=/home/gigi/Documents/Workstation_Config/systemd_config/watch_files/rclone-to-kobo.sh
-User=gigi
-Group=gigi
 
 [Install]
 WantedBy=multi-user.target

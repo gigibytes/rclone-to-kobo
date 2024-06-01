@@ -1,12 +1,12 @@
 [Unit]
-Description=rclone-to-kobo.service restarter
+Description=rclone-to-kobo.service starter
 After=network.target
 StartLimitIntervalSec=10
 StartLimitBurst=5
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/systemctl restart rclone-to-kobo.service
+ExecStart=/usr/bin/systemctl --user start rclone-to-kobo.service
 
 [Install]
 WantedBy=multi-user.target
