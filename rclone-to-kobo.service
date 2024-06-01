@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/home/gigi/Sync/Kobo
-ExecStart=/home/gigi/Documents/Workstation_Config/systemd_config/watch_files/rclone-to-kobo.sh
+ExecStart=/home/gigi/Documents/Workstation_Config/systemd_config/rclone-to-kobo/rclone-to-kobo.sh
 
 [Install]
 WantedBy=multi-user.target
