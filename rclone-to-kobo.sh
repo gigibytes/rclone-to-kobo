@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
-#Convert to .kepub for performance
+
+set -euo pipefail
+
+#TODO add test for files. if there are no files, don't do anything.
+if [[ -z "$(ls /home/gigi/Sync/Kobo)" ]]; then
+    echo "~/Sync/Kobo directory empty, doing nothing and exiting."
+    exit 0
+fi
+
+# Execution will continue if the above test fails.
+# Convert to .kepub for performance
 kpubify -iu /home/gigi/Sync/Kobo/
 
 # Clean up copied original epubs
