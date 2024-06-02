@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+IFS=$'\n' # Necessary to split list of files by newline, not spaces
 
 cd ""/home/gigi/Sync/Kobo
 
@@ -13,7 +14,7 @@ fi
 kpubify -iu /home/gigi/Sync/Kobo/
 
 # Clean up copied original epubs
-files="$(ls /home/gigi/Sync/Kobo | grep -v "kepub")"
+files="$(find . -type f | grep -v "kepub")"
 for file in $files
 do
     rm "$file"
