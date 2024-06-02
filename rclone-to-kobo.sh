@@ -13,7 +13,11 @@ fi
 kpubify -iu /home/gigi/Sync/Kobo/
 
 # Clean up copied original epubs
-rm "$(ls /home/gigi/Sync/Kobo | grep -v "kepub")"
+files="$(ls /home/gigi/Sync/Kobo | grep -v "kepub")"
+for file in $files
+do
+    rm "$file"
+done
 
 # Copy to Dropbox
 rclone copy /home/gigi/Sync/Kobo "Dropbox:Apps/Rakuten Kobo/rclone" --verbose >> /home/gigi/Sync/.rclone_logs/output.log
