@@ -9,7 +9,7 @@ The purpose is just to enable a really simple workflow for transferring files to
 - cleans up the original .epubs
 - sends the files to Dropbox
 
-And on my Kobo, I just open Dropbox and pull down whatever files I want.
+Then on my Kobo, I just open Dropbox and pull down whatever files I want.
 
 ### Why?
 
